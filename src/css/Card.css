@@ -1,0 +1,32 @@
+.my-card {
+  max-width: 800px;
+  min-height: 600px;
+  border: solid;
+  margin: 300px 0 300px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-style: groove;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-box {
+  max-width: 400px;
+  min-height: 200px;
+  border: 1px solid #333;
+  margin: 300px 0 300px 0;
+}
+
+.my-button {
+  margin: 100px 100px 100px 100px;
+}
+
+.desc {
+  font-size: 20px;
+  color: #9dcaeb;
+  font-weight: 100;
+}
+
+.counter {
+  color: #9dcaeb;
+  margin: 100px 0 0 0;
+  text-decoration: underline;
+}

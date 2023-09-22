@@ -1,0 +1,28 @@
+.text-box {
+  border-radius: 15px;
+}
+.text-unclicked {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.text-clicked {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.easy {
+  background-color: #79de79;
+}
+
+.medium {
+  background-color: #fcfc99;
+}
+
+.hard {
+  background-color: #fb6962;
+}
+
+.start {
+  background-color: #a8e4ef;
+}
