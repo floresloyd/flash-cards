@@ -48,7 +48,7 @@ const flashcards = [
   {
     question:
       "A step-by-step set of instructions or a sequence of actions for solving a specific problem or performing a specific task.",
-    answer: "Algorithm ",
+    answer: "Algorithm",
     difficulty: "easy",
   },
   {
@@ -137,10 +137,39 @@ const flashcards = [
 
 const Card = () => {
   const [currentCardIndex, setCardIndex] = useState(0); // Handle cycling through the cards
+  const [userAnswer, setUserAnswer] = useState("");
+  const [highscore, setHighscore] = useState(0);
+  const [totalCorrect, setTotalCorrect] = useState(0);
+  const [currentColor, setCurrentColor] = useState("correct");
+
+  const onCheckAnswer = () => {
+    const correctAnswer = flashcards[currentCardIndex].answer
+      .toLowerCase()
+      .replace(/\s/g, ""); // Convert correct answer to lowercase and remove spaces
+    const userInput = userAnswer.toLowerCase().replace(/\s/g, ""); // Convert user's input to lowercase and remove spaces
+
+    if (userInput === correctAnswer) {
+      // Correct answer logic (e.g., show a message, update a score, etc.)
+      setTotalCorrect((prevTotalCorrect) => prevTotalCorrect + 1);
+      setHighscore((prevHighscore) => prevHighscore + 1); // Increment the high score
+      setCurrentColor("correct");
+    } else {
+      // Incorrect answer logic (e.g., show a message, give hints, etc.)
+      setCurrentColor("wrong");
+      setHighscore(0);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    onCheckAnswer(); // Call your answer checking logic
+  };
 
   const handleNextCard = () => {
     if (currentCardIndex < flashcards.length - 1) {
       setCardIndex(currentCardIndex + 1);
+      setUserAnswer("");
+      setCurrentColor("none");
     } else {
       alert("No more cards!");
     }
@@ -149,6 +178,8 @@ const Card = () => {
   const handlePrevCard = () => {
     if (currentCardIndex > 0) {
       setCardIndex(currentCardIndex - 1);
+      setUserAnswer("");
+      setCurrentColor("none");
     } else {
       alert("No more cards!");
     }
@@ -164,6 +195,8 @@ const Card = () => {
     } while (randomNumber === 0 || randomNumber === 22);
 
     setCardIndex(randomNumber);
+    setUserAnswer("");
+    setCurrentColor("none");
   };
   return (
     <div className="my-card container d-flex flex-column align-items-center">
@@ -181,6 +214,28 @@ const Card = () => {
         answer={flashcards[currentCardIndex].answer}
         difficulty={flashcards[currentCardIndex].difficulty}
       />
+      {currentCardIndex >= 1 && (
+        <form onSubmit={handleFormSubmit}>
+          <label>Answer: </label>
+          <input
+            className={currentColor}
+            type="text"
+            id="answer"
+            name="answer"
+            value={userAnswer}
+            onChange={(e) => setUserAnswer(e.target.value)}
+          />
+          <button type="submit">Check Answer</button>
+        </form>
+      )}
+
+      {currentCardIndex >= 1 && (
+        <div>
+          <div className="totalCorrect">Total Correct : {totalCorrect} </div>
+          <div className="highScore">Highest Streak : {highscore} </div>
+        </div>
+      )}
+
       <div className="container d-flex justify-content-center">
         <div
           onClick={handlePrevCard}
