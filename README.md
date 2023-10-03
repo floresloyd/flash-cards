@@ -28,9 +28,12 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
+Here's a screenshot :
+<img src='src/assets/screenshot.png' title='vid-walkthrough' width='' alt='Video Walkthrough' />
+
 Here's a walkthrough of implemented user stories:
 
-<img src='src\assets\demo-vid.mp4' title='vid-walkthrough' width='' alt='Video Walkthrough' />
+<img src='src/assets/demo-vid.mp4' title='vid-walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
