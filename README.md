@@ -30,21 +30,19 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='src\assets\demo-vid.mp4' title='vid-walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
 GIF created with ...
 
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+- Clipchamp for Windows
 
 ## Notes
 
 - Learning curve managing multiple states
 - Verifying the answers using states
+- Having issues deploying the webpage on github pages. For some reason the HTML works but the REACT + Vite is not rendering.
 
 ## License
 
