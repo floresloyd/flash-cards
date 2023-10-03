@@ -31,11 +31,14 @@ The following **additional** features are implemented:
 Here's a screenshot :
 <img src='src/assets/screenshot.png' title='vid-walkthrough' width='' alt='Video Walkthrough' />
 
+Here's a GIF:
+![demo-gif](https://submissions.us-east-1.linodeobjects.com/web102/DpH7X52H.gif)
+
 Here's a walkthrough: <a href="https://github.com/floresloyd/flash-cards/blob/main/src/assets/demo-vid.mp4"> Video Link </a>
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with
 
 - Clipchamp for Windows
 
