@@ -1,6 +1,6 @@
 # Web Development Project 3 - _Flash-Cards_
 
-Submitted by: **Loyd**
+Submitted by: **Loyd Flores**
 
 This web app: **insert description**
 
