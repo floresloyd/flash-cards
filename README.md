@@ -32,7 +32,10 @@ Here's a screenshot :
 <img src='src/assets/screenshot.png' title='vid-walkthrough' width='' alt='Video Walkthrough' />
 
 Here's a walkthrough:
-![Video Walkthrough](src/assets/demo-vid.mp4)
+
+<video width="320" height="240" controls>
+  <source src="src/assets/demo-vid.mp4" type="video/mp4">
+</video>
 
 <!-- Replace this with whatever GIF tool you used! -->
 
